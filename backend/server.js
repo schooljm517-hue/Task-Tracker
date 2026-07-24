@@ -29,7 +29,6 @@ app.use((req, res) => {
 const initializeDatabase = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
